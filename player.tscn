@@ -1,6 +1,6 @@
 [gd_scene format=3 uid="uid://b68jlcdn6tlmb"]
 
-[ext_resource type="Texture2D" uid="uid://b7lwx3gfxncgv" path="res://School Game Sprites/Base.png" id="1_4flbx"]
+[ext_resource type="Texture2D" uid="uid://bni2oenyspc8g" path="res://School Game Sprites/Base.png" id="1_4flbx"]
 [ext_resource type="Script" uid="uid://cjumefhpokni4" path="res://player.gd" id="1_onrkg"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_onrkg"]
@@ -15,8 +15,7 @@ animations = [{
 }]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_i3pqv"]
-radius = 6.0
-height = 20.0
+height = 50.0
 
 [node name="Player" type="CharacterBody2D" unique_id=2118292306]
 texture_filter = 1

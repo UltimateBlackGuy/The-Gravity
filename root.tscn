@@ -19,34 +19,34 @@ size = Vector2(320, 22)
 [node name="Player" parent="." unique_id=2118292306 instance=ExtResource("1_pq8q7")]
 
 [node name="Camera2D" type="Camera2D" parent="." unique_id=443008456]
-zoom = Vector2(2, 2)
+zoom = Vector2(3, 3)
 
 [node name="Wall Borders" type="Node2D" parent="." unique_id=1263593026]
 
 [node name="RightWall" type="StaticBody2D" parent="Wall Borders" unique_id=1751760156]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Borders/RightWall" unique_id=1436157636]
-position = Vector2(170, 0)
+position = Vector2(116, 0)
 shape = SubResource("RectangleShape2D_pq8q7")
 debug_color = Color(0.30588236, 0.43529412, 0.21568628, 1)
 
 [node name="LeftWall" type="StaticBody2D" parent="Wall Borders" unique_id=165658348]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Borders/LeftWall" unique_id=1335818984]
-position = Vector2(-170, 0)
+position = Vector2(-117, 0)
 shape = SubResource("RectangleShape2D_pyidc")
 debug_color = Color(0.30588236, 0.43529412, 0.21568628, 1)
 
 [node name="Ceiling" type="StaticBody2D" parent="Wall Borders" unique_id=1620759385]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Borders/Ceiling" unique_id=1609892929]
-position = Vector2(0, -100)
+position = Vector2(-3, -70)
 shape = SubResource("RectangleShape2D_vvh5c")
 debug_color = Color(0.30588236, 0.43529412, 0.21568628, 1)
 
 [node name="Floor" type="StaticBody2D" parent="Wall Borders" unique_id=166528619]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Wall Borders/Floor" unique_id=199565302]
-position = Vector2(0, 99)
+position = Vector2(0, 69)
 shape = SubResource("RectangleShape2D_28aoi")
 debug_color = Color(0.3191247, 0.6243435, 0.09972664, 0.41960785)
