@@ -20,7 +20,7 @@ size = Vector2(27, 56)
 
 [node name="NPC" type="Area2D" unique_id=538018500]
 collision_layer = 2
-collision_mask = 2
+collision_mask = 15
 script = ExtResource("1_xxcha")
 Name = "Name"
 portrait = ExtResource("2_kh24r")

@@ -50,6 +50,7 @@ Interact={
 2d_physics/layer_1="Collisions"
 2d_physics/layer_2="NPC Dialogue"
 2d_physics/layer_3="Item"
+2d_physics/layer_4="Player"
 
 [physics]
 

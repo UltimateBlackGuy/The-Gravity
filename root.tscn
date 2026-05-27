@@ -24,8 +24,11 @@ texture_margin_top = 3.0
 texture_margin_right = 3.0
 texture_margin_bottom = 3.0
 
-[node name="Root" type="Node" unique_id=343687041]
+[node name="TestRoom" type="Node2D" unique_id=2056795561]
 script = ExtResource("1_28aoi")
+
+[node name="NPC" parent="." unique_id=538018500 instance=ExtResource("4_jnlp7")]
+position = Vector2(-93, 34)
 
 [node name="Player" parent="." unique_id=2118292306 instance=ExtResource("1_pq8q7")]
 
@@ -78,6 +81,10 @@ theme_override_styles/normal = SubResource("StyleBoxTexture_vvh5c")
 horizontal_alignment = 1
 vertical_alignment = 1
 
+[node name="DialogueTimer" type="Timer" parent="CanvasLayer/DialogueBox" unique_id=2039244865]
+wait_time = 5.0
+one_shot = true
+
 [node name="NPCPortrait" type="TextureRect" parent="CanvasLayer" unique_id=399458129]
 visible = false
 anchors_preset = 15
@@ -91,7 +98,10 @@ grow_horizontal = 2
 grow_vertical = 2
 stretch_mode = 2
 
-[node name="NPC" parent="." unique_id=538018500 instance=ExtResource("4_jnlp7")]
-position = Vector2(-93, 32)
+[node name="GetRidOfDialogue" type="Timer" parent="." unique_id=239327940]
+wait_time = 7.0
+one_shot = true
 
 [connection signal="PlayerInteracted" from="NPC" to="." method="_on_npc_player_interacted"]
+[connection signal="timeout" from="CanvasLayer/DialogueBox/DialogueTimer" to="." method="_on_dialogue_timer_timeout"]
+[connection signal="timeout" from="GetRidOfDialogue" to="." method="_on_get_rid_of_dialogue_timeout"]

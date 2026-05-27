@@ -5,14 +5,24 @@ class_name NPC
 @export var portrait: Texture
 @onready var Sprite = $AnimatedSprite2D
 
-var dialogue = {
-	"Line1" = "Howdy I am a NPC",
-	"Line2" = "Idk bro",
-	"Line3" = "Alright See ya"
-}
+var dialogue = [
+	"Howdy, Im a NPC",
+	"Uhh, I don't really know what to put here now",
+	"Goodbye chumington"
+]
 
 signal PlayerInteracted(Dialogue)
 
-func _on_body_entered(body: Player) -> void:
-	if body and Input.is_action_just_pressed("Interact"):
+var player_near = false
+
+func _on_body_entered(body):
+	if body is Player:
+		player_near = true
+
+func _on_body_exited(body):
+	if body is Player:
+		player_near = false
+
+func _process(delta):
+	if player_near and Input.is_action_just_pressed("Interact"):
 		PlayerInteracted.emit(dialogue)
