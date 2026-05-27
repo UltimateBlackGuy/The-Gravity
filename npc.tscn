@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://dqvr27qes4t82"]
+
+[ext_resource type="Texture2D" uid="uid://bni2oenyspc8g" path="res://School Game Sprites/Base.png" id="1_ideak"]
+[ext_resource type="Script" uid="uid://c2m0oele04xwl" path="res://npc.gd" id="1_xxcha"]
+[ext_resource type="Texture2D" uid="uid://ds8oo56oo4oi8" path="res://School Game Sprites/PlaceholderPortrait.png" id="2_kh24r"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xxcha"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_ideak")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kh24r"]
+size = Vector2(27, 56)
+
+[node name="NPC" type="Area2D" unique_id=538018500]
+collision_layer = 2
+collision_mask = 2
+script = ExtResource("1_xxcha")
+Name = "Name"
+portrait = ExtResource("2_kh24r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1247369403]
+sprite_frames = SubResource("SpriteFrames_xxcha")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1603893836]
+position = Vector2(-0.5, -1)
+shape = SubResource("RectangleShape2D_kh24r")
+debug_color = Color(0.57525426, 0.54761815, 0.24718499, 0.41960785)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
